@@ -12,3 +12,19 @@ import/export
 
 
 JSX    
+
+
+//ReactDom.render(a,b)
+//El valor b es asociativa a una etiqueta de mi <html /dom>
+ReactDOM.render(<App/>, document.getElementById("root")); //siempre tiene que quedar cerrada la etiqueta <ejemplo/>;
+
+//.render es un archivo de DOM, por eso es quenecesito importar a ReactDom
+
+
+Componentes: son funciones que siempre retornan a una vista Y siempre comienzan con Mayúscula
+
+--function App(){ RETURN ""}
+
+--const App = () => {RETURN ""}
+
+--const App {}/casi no se usan, no lo vamos a ver en el curso.
