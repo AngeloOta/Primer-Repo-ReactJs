@@ -1,0 +1,14 @@
+import/export 
+
+    CommonJS
+
+    const nombre_variable = requiere("nombre_archivo".js); se utiliza para asociar un archivo JS a una variable. 
+
+    esma script 6 ES6)
+
+    import nombre_variable from "nombre_archivo";
+    import {nombre_variable} from "nombre_variable";
+    ****no se coloca el .JS ya que por default WEBPACK lo toma archivo Javascript
+
+
+JSX    
