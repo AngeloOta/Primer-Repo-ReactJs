@@ -28,3 +28,13 @@ Componentes: son funciones que siempre retornan a una vista Y siempre comienzan 
 --const App = () => {RETURN ""}
 
 --const App {}/casi no se usan, no lo vamos a ver en el curso.
+
+
+Props parametro de una funcion
+    <header titulo="Mi E-Commerce" /> ===análogo header({titulo: Mi E-Commerce, subtitulo: "test"})
+
+    const Header = (parametros) =>  {
+        console.log(parameto)
+        console.log(parametro.titulo)
+        
+    }
