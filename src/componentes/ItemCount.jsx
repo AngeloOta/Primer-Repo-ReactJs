@@ -5,7 +5,7 @@ const ItemCount = ({stock, initial, onAdd})=>{
 
     const aumentar = ()=>{
         let agregar = contador + 1
-        if ((agregar<stock) && (agregar>=1)){
+        if ((agregar<=stock) && (agregar>=1)){
         setContador(agregar)
         }
     }
