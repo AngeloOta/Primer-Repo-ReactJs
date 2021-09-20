@@ -38,3 +38,102 @@ Props parametro de una funcion
         console.log(parametro.titulo)
         
     }
+
+props: son parámetros de una función
+Si una prop y/o estado cambia, se reejecuta el código.
+estado: son variables internas de un componente que perduran en el tiempo las cuales podesmos modificar para reaccionar a cambios.
+ciclo de vida: Es la ejecución de un componente en el tiempo de vida de la función
+
+
+Props 
+<Header titulo="Mi E-Commerce">
+Header ({titulo:"Mi E-Commerce"})
+const Header = (Parametros)=> {
+    titulo = "Mi E-Commerce"
+}
+
+
+CLOSURES : son funciones dentro de funaciones que se usan para encapsular variables
+
+HOOKS : Son funciones multiusos que nos permiten adaptar componentes a una 
+
+const [contador, setContador] = useState(0),
+    /*este Hook sirve para crear una variable de  estado 
+    const resultado = useState(0)
+   
+    El Hook useEffect sirve para ejecutar una funcion cuando el componente se <renderiza></renderiza>*/
+
+    useEffect(()=> {
+        console.log("Se ha renderizado el sitio")
+    })
+
+
+ASINCRONÍA : TRIGGERS(EVENTOS) - TIMERS - REQUEST
+
+    setTimeout(()=>{
+        conosole.log(1)},5000)5000serían 5 segundos.
+
+
+
+PROMESAS
+
+    operaciones.then()
+
+    operaciones.catch()
+Las promesas siempre dan un objeto que representa la finalidad de una operación
+pueden pasar por tres estados = pending - fulfiled . rejected
+tienen un valor asociado que es el resultado de la operación
+
+ejemplo
+
+const promesa = new Promise((resolver,rechazar)=>{
+    setTimeout(()=>{
+        console.log(1)},5000)
+)
+
+
+
+CONST ARR = [1,2,3,4,5]
+fOR ()
+
+ARR.FOREACH((ELEMENTO,I)=>{
+    HACE UNA VUELTA POR CADA ELEMENTO SIN PARAR HASTA EL ÚLTIMO.
+})
+I ES INDICE
+ARR.MAP ((ELEMENTO,I) =>{}) PARA HACER ALGUNA MODIFICACION DENTRO DE NUESTRO CATÁLOGO 
+ejem... 
+
+
+
+
+
+
+
+
+productos.map((elemento,índice)=>{elementro.precio = elemento.precio + 5
+            return elemento})
+
+
+  // Arranco el componente con un estado que sea un array de productos vacio
+    // const [estado, setEstado] = useState ()
+    const  [ productosIniciales, setProductosIniciales ]  =  useState ( [ ] )
+
+
+useEffect ( ( ) => {
+        // Eventualmente esta parte la vamos a cambiar por un pedido real
+        const  simulacion_de_pedido  =  new  Promise ( ( resolver ) => {
+            setTimeout ( ( ) => {
+                resolver ( productosIniciales )
+            } , 2000 )
+        } )
+
+        simulacion_de_pedido
+            .then ( 
+                // Aca cambio el estado
+                productosIniciales.map (() => {
+                    productosIniciales.precio = productosIniciales.precio + 10
+                    return productosIniciales }
+                    ),
+                console.log ( setProductosIniciales )
+         )
+    }, [] )
