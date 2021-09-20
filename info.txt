@@ -137,3 +137,36 @@ useEffect ( ( ) => {
                 console.log ( setProductosIniciales )
          )
     }, [] )
+
+
+Catch está asociado al rejected de una promesa.
+Fetch  
+const pedido = fetch()
+
+HTTP
+
+REQUEST / cliente
+
+VERBO / METODO - IP/URL - VERSION
+
+
+
+metodo; es la intención del pedido get/post/put/patch/delete
+Body: es el cuerpo de la peticion
+Header: es el encabezado de la peticion y configura metainformacion del cliente
+código: es un número que indica el estado de la peticion (200, 201, 302, 304, 400,403, 404, 405, 500, etc)
+
+RESPONSE/SERVIDOR
+lo pedis=> fetch, transformas =>.then(()=>{return respuesta.json}) - respuesta => console.log(respuesta)
+const pedido = fetch()
+
+pedido
+    .then((response)=>{
+        return respuesta.json
+    })
+    .then((respuesta)=>{
+        console.log(respuesta)
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
