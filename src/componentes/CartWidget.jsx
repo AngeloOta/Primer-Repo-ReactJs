@@ -9,7 +9,7 @@ const CartWidget = () => {
 }*/
 const CartWidget = () => {
     return (
-        <h2 class="material-icons" >view_in_ar</h2>
+        <h2 className="material-icons" >view_in_ar</h2>
     )
 }
 

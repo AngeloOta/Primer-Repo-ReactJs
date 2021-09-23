@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 
+
 const productosIniciales = [
-  {nombre:"prod1", precio:45, id:1},
-  {nombre:"prod2", precio:45, id:2}
+  {nombre:"prod1", precio:45, id:1, stock:5},
+  {nombre:"prod2", precio:45, id:2, stock:5}
 ]
 
 const ItemListContainer = () => {
@@ -18,34 +19,28 @@ const ItemListContainer = () => {
       }, 2000)
     })
     pedido
-      .then((productos)=>{
-        setProductos(productos)
+      .then((resultado)=>{
+        setProductos(resultado)
+        console.log(resultado)
       })
-  })
+  }, [])
 
-  if (productos.length > 0){
+  if (productos.length > 0){//como es cero según el array vacio en mi estado, va a arrancar cargando la página. 
     return( 
       <>
-      <ItemList productos={productos}/>
+      <ItemList setProductos={setProductos}/>
       <ItemCount stock={10} initial={1} onAdd={()=>{}} />
       </>
     )
   } else {
     return (
-      <>
-        <div class="spinner-border text-warning" role="status">
-            <span class="visually-hidden">cargando...</span>
+        <div className="spinner-border text-warning" role="status">
+            <span className ="visually-hidden">cargando...</span>
         </div>
-      </>  
     )
   }
   
-  /*return(
-    <>
-       <p>...</p>
-       <ItemCount stock={10} initial={1} onAdd={()=>{}} />
-    </>
-    );*/
+
 }
 
 export default ItemListContainer
